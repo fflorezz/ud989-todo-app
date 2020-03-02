@@ -283,7 +283,7 @@ label[for='toggle-all'] {
 }
 
 #todo-list li.completed label {
-	color: #a9a9a9;
+	color: #c5c5c5;
 	text-decoration: line-through;
 }
 
