@@ -1,8 +1,8 @@
 /*global Backbone */
 var app = app || {};
 
-(function () {
-	'use strict';
+(function() {
+	"use strict";
 
 	// Todo Model
 	// ----------
@@ -12,14 +12,20 @@ var app = app || {};
 		// Default attributes for the todo
 		// and ensure that each todo created has `title` and `completed` keys.
 		defaults: {
-			title: '',
-			completed: false
+			title: "",
+			completed: false,
+			priority: false
 		},
 
 		// Toggle the `completed` state of this todo item.
-		toggle: function () {
+		toggle: function() {
 			this.save({
-				completed: !this.get('completed')
+				completed: !this.get("completed")
+			});
+		},
+		togglePriority: function() {
+			this.save({
+				priority: !this.get("priority")
 			});
 		}
 	});
